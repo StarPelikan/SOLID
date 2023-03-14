@@ -1,14 +1,20 @@
 package org.example;
 
 public class Purchase {
-    //Слишком много всего в классе, нарушение первого принципа SOLID
-    //Оставил здесь конструктор.
+
     protected String title;
     protected int count;
 
     public Purchase(String title, int count) {
-        this.title = title;
+        this.title = title.toLowerCase();
         this.count = count;
+    }
 
+    public int getCount() {
+        return count;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
